@@ -5,6 +5,7 @@
 package dao;
 
 import java.util.List;
+import modelo.Persona;
 
 /**
  *
@@ -12,11 +13,11 @@ import java.util.List;
  */
 public interface IPersonaDao {
     
-    public List<Empleado> getAllEmpleados();
-    public Empleado getEmpleado(int empleadoId);
-    public boolean addEmpleado(Empleado empleado);
-    public boolean updateEmpleado(Empleado empleado);
-    public boolean deleteEmpleado(Empleado empleado);
+    public List<Persona> getAllEmpleados();
+    public Persona getEmpleado(int empleadoId);
+    public boolean addEmpleado(Persona persona);
+    public boolean updateEmpleado(Persona persona);
+    public boolean deleteEmpleado(Persona persona);
 
     
     
