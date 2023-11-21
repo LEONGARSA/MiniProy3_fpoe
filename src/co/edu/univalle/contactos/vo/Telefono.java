@@ -21,5 +21,17 @@ public class Telefono {
 	public String getNroTelefono() {
 		return nroTelefono;
 	}
+        
+        public void setNroTelefono(String nroTelefono) {
+		this.nroTelefono = nroTelefono;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}        
 
 }
