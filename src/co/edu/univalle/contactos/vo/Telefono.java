@@ -10,4 +10,16 @@ package co.edu.univalle.contactos.vo;
  */
 public class Telefono {
     
+    private String nroTelefono;
+	private String descripcion;
+	
+	public Telefono(String nroTelefono, String descripcion) {
+		this.nroTelefono = nroTelefono;
+		this.descripcion = descripcion;
+	}
+
+	public String getNroTelefono() {
+		return nroTelefono;
+	}
+
 }
