@@ -3,91 +3,78 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package co.edu.univalle.contactos.model;
-
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
+
+import co.edu.univalle.contactos.dao.Dao;
+import co.edu.univalle.contactos.vo.Contacto;
 
 /**
  *
  * @author LEONARDO
  */
 public class Model {
-    private String id;
-    private String nombres;
-    private String apellidos;
-    private List <String> direccion;
-    private HashMap <String,String> telefono;
-    private Date fechaNacimiento;    
-    private String RolUniversitario;
+	private List<Contacto> contactos;
+	private Contacto contacto;
+	
+	private Dao dao;
+	
+	public Model() {
+		dao = Dao.getInstance();
+		contacto = null;
+	}
 
-    public Model(String id, String nombres, String apellidos, List<String> direccion, HashMap<String, String> telefono, Date fechaNacimiento, String RolUniversitario) {
-        this.id = id;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.fechaNacimiento = fechaNacimiento;
-        this.RolUniversitario = RolUniversitario;
-    }
+	public List<Contacto> getContactos() {
+		return contactos;
+	}
 
-    public String getId() {
-        return id;
-    }
+	public void setContactos(List<Contacto> contactos) {
+		this.contactos = contactos;
+	}
 
-    public String getNombres() {
-        return nombres;
-    }
+	public Contacto getContacto() {
+		return contacto;
+	}
 
-    public String getApellidos() {
-        return apellidos;
-    }
+	public void setContacto(Contacto contacto) {
+		this.contacto = contacto;
+	}
 
-    public List<String> getDireccion() {
-        return direccion;
-    }
+	public Contacto save(Contacto contacto) {
+		List<Contacto> filtered = dao.findByIdentificacion(contacto.getIdentificacion());
+		
+		if (filtered.size() > 0) {
+			//El contacto con ese número de documento ya existe
+			return null;
+		} else {
+			insert(contacto);
+		}
+		
+		return contacto;
+	}
+	
+	public void insert(Contacto contacto) {
+		dao.insert(contacto);
+	}
 
-    public HashMap<String, String> getTelefono() {
-        return telefono;
-    }
+	public void delete(Long identificacion) {
+		dao.delete(identificacion);
+	}
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
+	public void loadContacto(Long identificacion) {
+		if (dao.findByIdentificacion(identificacion).size() > 0) {
+			contacto = dao.findByIdentificacion(identificacion).get(0);
+		}
+	}
+	
+	public void findByIdentificacion(Long identificacion) {
+		contactos = dao.findByIdentificacion(identificacion);
+	}
+	
+	public void findAll() {
+		contactos = dao.findAll();
+	}
 
-    public String getRolUniversitario() {
-        return RolUniversitario;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    public void setDireccion(List<String> direccion) {
-        this.direccion = direccion;
-    }
-
-    public void setTelefono(HashMap<String, String> telefono) {
-        this.telefono = telefono;
-    }
-
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
-    public void setRolUniversitario(String RolUniversitario) {
-        this.RolUniversitario = RolUniversitario;
-    }
-
-
-    
-    
+	public void update(Contacto contacto) {
+		dao.update(contacto);
+	}
 }
