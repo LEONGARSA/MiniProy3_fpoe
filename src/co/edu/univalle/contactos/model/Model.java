@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package modelo;
+package co.edu.univalle.contactos.model;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author LEONARDO
  */
-public class Persona {
+public class Model {
     private String id;
     private String nombres;
     private String apellidos;
@@ -21,7 +21,7 @@ public class Persona {
     private Date fechaNacimiento;    
     private String RolUniversitario;
 
-    public Persona(String id, String nombres, String apellidos, List<String> direccion, HashMap<String, String> telefono, Date fechaNacimiento, String RolUniversitario) {
+    public Model(String id, String nombres, String apellidos, List<String> direccion, HashMap<String, String> telefono, Date fechaNacimiento, String RolUniversitario) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
