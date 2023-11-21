@@ -4,6 +4,10 @@
  */
 package co.edu.univalle.contactos;
 
+import co.edu.univalle.contactos.controller.Controller;
+import co.edu.univalle.contactos.model.Model;
+import co.edu.univalle.contactos.view.View;
+
 /**
  *
  * @author LEONARDO
@@ -14,7 +18,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    		View view = new View();
+		Model model = new Model();
+		
+		Controller controller = new Controller(view, model);
+		controller.initialize();
     }
     
 }
