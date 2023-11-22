@@ -72,8 +72,12 @@ public class Controller implements ActionListener, MouseListener {
 				}
 	        }
 		});
+
 		
 		//Evento filtrar teclas
+
+                //Evento filtrar teclas
+
 		view.txtNombres.addKeyListener(new KeyAdapter() {
 	        public void keyTyped(KeyEvent event) {
 	        	char keyPressed = event.getKeyChar();

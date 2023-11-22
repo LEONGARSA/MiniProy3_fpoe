@@ -3,9 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/LEONARDO/Desktop/Leo%20&amp;%20Laura/MiniProy3_fpoe/src/co/edu/univalle/contactos/Main.java</file>
             <file>file:/C:/Users/LEONARDO/Desktop/Leo%20&amp;%20Laura/MiniProy3_fpoe/src/co/edu/univalle/contactos/controller/Controller.java</file>
             <file>file:/C:/Users/LEONARDO/Desktop/Leo%20&amp;%20Laura/MiniProy3_fpoe/src/co/edu/univalle/contactos/view/View.java</file>
+=======
+            <file>file:/C:/Users/LAURA/Desktop/Leo%20&amp;%20Laura/MiniProy3_fpoe/src/co/edu/univalle/contactos/controller/Controller.java</file>
+            <file>file:/C:/Users/LAURA/Desktop/Leo%20&amp;%20Laura/MiniProy3_fpoe/src/co/edu/univalle/contactos/view/View.java</file>
+>>>>>>> 8880b5da618683b012b69897948ea7e837f236fd
         </group>
     </open-files>
 </project-private>
