@@ -20,9 +20,8 @@ import javax.swing.ListSelectionModel;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import org.jdatepicker.JDatePicker;
-import com.toedter.calendar.JDateChooser;
-/**
- *
+
+ /*
  * @author LAURA
  */
 public class View extends JFrame {
@@ -184,7 +183,7 @@ public View() {
 		btnEliminarTelefono.setBounds(482, 76, 52, 26);
 		pnlTelefonos.add(btnEliminarTelefono);
 		
-		JDateChooser dtpFechaNacimiento = new JDateChooser(); 
+		dtpFechaNacimiento = new JDatePicker() {}; 
                 dtpFechaNacimiento.setBounds(463, 80, 145, 26);
                 pnlPrincipal.add(dtpFechaNacimiento);
 		
